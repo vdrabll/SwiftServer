@@ -19,7 +19,7 @@ public func configure(_ app: Application) throws {
       return InfoResponse(request: data)
     }
     
-    app.databases.use(.postgres(hostname: "localhost", username: "postgress", password: "", database: "swiftdocsdb" ),  as: .psql)
+    app.databases.use(.postgres(hostname: "localhost", username: "postgress", password: "", database: "swiftdocsdb"), as: .psql)
 
     app.migrations.add(CreateTodo())
 
