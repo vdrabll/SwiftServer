@@ -18,7 +18,7 @@ struct CreateSwiftDoc: Migration {
     }
     
     func revert(on database: Database) -> EventLoopFuture<Void> {
-        <#code#>
+        database.schema("SwiftLessons").delete()
     }
     
 }
