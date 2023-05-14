@@ -25,10 +25,7 @@ public func configure(_ app: Application) throws {
                                                      password: "",
                                                      database: "swiftdocsdb")), as: .psql)
     
-//    app.migrations.add(CreateSwiftDoc())
-    app.get(<#T##PathComponent...#>) { <#Request#> in
-        <#code#>
-    }
+    app.migrations.add(CreateSwiftDoc())
 
     app.views.use(.leaf)
 

@@ -10,5 +10,8 @@ import Vapor
 import Fluent
 
 struct LessionData: Content {
+    let id: UUID
+    let name: String
+    let data: String
     
 }
