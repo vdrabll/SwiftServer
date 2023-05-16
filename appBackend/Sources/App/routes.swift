@@ -12,3 +12,11 @@ func routes(_ app: Application) throws {
 
     try app.register(collection: TodoController())
 }
+
+struct InfoData: Content {
+ let name: String
+}
+
+struct InfoResponse: Content {
+  let request: InfoData
+}
