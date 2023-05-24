@@ -16,14 +16,20 @@ final class SwiftDoc: Model, Content {
     @ID(key: .id)
     var id: UUID?
     
-    @Field(key: "lession")
-    var lession: String
+    @Field(key: "lession_name")
+    var lession_name: String
+    
+    @Field(key: "lession_data")
+    var lession_data: String
+    
+    @Field(key: "lession_questions")
+    var lession_questions: String?
     
     init() { }
     
     init(id: UUID? = nil, lession: String) {
         self.id = id
-        self.lession = lession
+        self.lession_name = lession
     }
 }
 
