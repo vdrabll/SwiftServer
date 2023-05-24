@@ -19,12 +19,12 @@ version: '3.7'
 volumes:
   db_data:
 
-x-shared_environment: &shared_environment
-  LOG_LEVEL: ${LOG_LEVEL:-debug}
-  DATABASE_HOST: db
-  DATABASE_NAME: vapor_database
-  DATABASE_USERNAME: vapor_username
-  DATABASE_PASSWORD: vapor_password
+#x-shared_environment: &shared_environment
+#  LOG_LEVEL: ${LOG_LEVEL:-debug}
+#  DATABASE_HOST: db
+#  DATABASE_NAME: vapor_database
+#  DATABASE_USERNAME: vapor_username
+#  DATABASE_PASSWORD: vapor_password
   
 services:
 #  app:
@@ -62,6 +62,7 @@ services:
 #    deploy:
 #      replicas: 0
   db:
+    container_name: db
     image: postgres:14-alpine
     volumes:
       - db_data:/var/lib/postgresql/data/pgdata
